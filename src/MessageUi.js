@@ -73,6 +73,14 @@ function MessageUI() {
                     <LogoutIcon />
                 </IconButton>
             </div>
+            <div className='App__message__box'>
+                <FlipMove>
+                    {messages.map(({ id, message }) => (
+                        <Messages key={id} UID={UID} message={message} />
+                    ))}
+                </FlipMove>
+            </div>
+            <br/>
             <form className='app__form'>
                 <FormControl className='app__formControl'>
                     <InputEmoji className='app__input' placeholder='Enter a message' value={input} onChange={setinput} type='submit' />
@@ -81,13 +89,6 @@ function MessageUI() {
                     </IconButton>
                 </FormControl>
             </form>
-            <div className='App__message__box'>
-                <FlipMove>
-                    {messages.map(({ id, message }) => (
-                        <Messages key={id} UID={UID} message={message} />
-                    ))}
-                </FlipMove>
-            </div>
 
 
         </div>

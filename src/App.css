@@ -23,7 +23,9 @@ span {
   text-align: center;
   font-weight: 600;
 }
-
+br{
+  margin: 4%;
+}
 
 .App__message__box {
   width: 100%;
